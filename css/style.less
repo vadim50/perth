@@ -1,0 +1,345 @@
+/*!
+ * Bootstrap v3.3.4 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+// Reset and dependencies
+@import "../bootstrap/less/normalize.less";
+@import "../bootstrap/less/print.less";
+@import "../bootstrap/less/glyphicons.less";
+
+// Core CSS
+@import "../bootstrap/less/scaffolding.less";
+@import "../bootstrap/less/type.less";
+@import "../bootstrap/less/code.less";
+@import "../bootstrap/less/grid.less";
+@import "../bootstrap/less/tables.less";
+@import "../bootstrap/less/forms.less";
+@import "../bootstrap/less/buttons.less";
+
+// Components
+@import "../bootstrap/less/component-animations.less";
+@import "../bootstrap/less/dropdowns.less";
+@import "../bootstrap/less/button-groups.less";
+@import "../bootstrap/less/input-groups.less";
+@import "../bootstrap/less/navs.less";
+@import "../bootstrap/less/navbar.less";
+@import "../bootstrap/less/breadcrumbs.less";
+@import "../bootstrap/less/pagination.less";
+@import "../bootstrap/less/pager.less";
+@import "../bootstrap/less/labels.less";
+@import "../bootstrap/less/badges.less";
+@import "../bootstrap/less/jumbotron.less";
+@import "../bootstrap/less/thumbnails.less";
+@import "../bootstrap/less/alerts.less";
+@import "../bootstrap/less/progress-bars.less";
+@import "../bootstrap/less/media.less";
+@import "../bootstrap/less/list-group.less";
+@import "../bootstrap/less/panels.less";
+@import "../bootstrap/less/responsive-embed.less";
+@import "../bootstrap/less/wells.less";
+@import "../bootstrap/less/close.less";
+
+// Components w/ JavaScript
+@import "../bootstrap/less/modals.less";
+@import "../bootstrap/less/tooltip.less";
+@import "../bootstrap/less/popovers.less";
+@import "../bootstrap/less/carousel.less";
+
+// Utility classes
+@import "../bootstrap/less/utilities.less";
+@import "../bootstrap/less/responsive-utilities.less";
+
+/*=============================================
+===============================================*/
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?711971');
+  src: url('../font/fontello.eot?711971#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?711971') format('woff'),
+       url('../font/fontello.ttf?711971') format('truetype'),
+       url('../font/fontello.svg?711971#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?711971#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-pinterest:before { content: '\e800'; } /* '' */
+.icon-align-justify:before { content: '\e801'; } /* '' */
+.icon-download-cloud:before { content: '\e802'; } /* '' */
+.icon-cancel:before { content: '\e803'; } /* '' */
+.icon-mail:before { content: '\e804'; } /* '' */
+.icon-home-outline:before { content: '\e805'; } /* '' */
+.icon-heart-empty:before { content: '\e806'; } /* '' */
+.icon-desktop:before { content: '\e807'; } /* '' */
+.icon-mail-alt:before { content: '\e808'; } /* '' */
+.icon-dribbble:before { content: '\e809'; } /* '' */
+.icon-beer:before { content: '\e80a'; } /* '' */
+.icon-facebook:before { content: '\e80b'; } /* '' */
+.icon-twitter:before { content: '\e80c'; } /* '' */
+.icon-paper-plane:before { content: '\e80d'; } /* '' */
+.icon-up-open:before { content: '\e80e'; } /* '' */
+/*==============================================
+=================================================*/
+.font2
+{
+	font-family: "Kaushan Script","Arial", cursive;
+}
+.font3
+{
+	  font-family: "BlackJackRegular", arial;
+}
+.main-content
+{
+	font-family: "Open Sans","Arial", sans-serif;
+}
+.wrapper
+{
+	margin: 0 auto;
+	width: 80%;
+}
+.header
+{
+	position: relative;
+	background-color: #64c3e7;
+	background-image: url("../img/header-bg.jpg");
+
+
+	.header-logo
+	{
+		margin: 0;
+	}
+	.header-logo a
+	{
+		.font2;
+		display: inline-block;
+		font-size: 48px;
+		line-height: 50px;
+		font-weight: 400;
+		color: #0da9e5;
+		margin: 0;
+		padding: 15px 39px 31px;
+		background-color: #fff;
+		border-bottom: 4px solid #0da9e5;
+		text-decoration: none;
+		box-shadow: 14px 13px 0px #26b0e6;
+
+	}
+	.navigation a
+	{
+		text-decoration: none;
+		display: inline-block;
+		padding-top: 40px;
+	}
+	.navigation i
+	{
+		display: inline-block;
+		font-size: 22px;
+		color:#fff;
+		
+	}
+	.header-title
+	{
+		.font3;
+		font-size: 60px;
+		line-height: 50px;
+		margin: 0;
+		color: #fff;
+		padding-top: 95px;
+		padding-bottom: 60px;
+	}
+	.header-text
+	{
+		font-size: 35px;
+		line-height: 25px;
+		font-weight: 300;
+		margin: 0;
+		color: #fff;
+	}
+	.header-text .italic
+	{
+		font-weight: 700;
+		font-style: italic;
+	}
+	.header-phone
+	{
+		padding-top: 72px;
+	}
+	.header-phone-devise
+	{
+		width: 230px;
+		background-color:#474e5d;
+		padding-top: 20px;
+		border-top-left-radius:35px;
+		border-top-right-radius: 35px;
+	}
+	.header-phone-camera
+	{
+		display: inline-block;
+		height: 10px;
+		width: 10px;
+		border-radius: 50%;
+		background-color: #a5a4a4;
+		
+	}
+	.header-phone-speaker
+	{
+		display: inline-block;
+		width: 43px;
+		height: 10px;
+		background-color: #a5a4a4;
+		border-radius:10px;
+		margin-bottom: 20px;
+	}
+	.header-phone-content
+	{
+		width: 100%;
+		display: inline-block;
+		padding-top: 10px;
+	}
+	.header-phone-overlay
+	{
+		display: inline-block;
+		background-color: #f3787a;
+		width: 86%;
+		height: 200px;
+	}
+	.header-btn a
+	{
+		display: inline-block;
+		text-decoration: none;
+		font-size: 15px;
+		line-height: 25px;
+		font-weight: 400;
+		color:#fff;
+		padding: 20px 30px;
+		border: 2px solid #fff;
+		border-radius: 5px;
+		box-shadow: -2px 4px 14px rgba(0, 0, 0, 0.37);
+	}
+	.header-btn i
+	{
+		margin-left: 10px;
+	}
+	.header-btn
+	{
+		padding-top: 50px;
+	}
+	.surprize
+	{
+		display: inline-block;
+		width: 100%;
+		min-height: 100%;
+		position: absolute;
+		top:0%;
+		left: 0%;
+		margin-left: 0%;
+		background-color: rgba(243,120,122, .9);
+		display: none;
+		
+
+	}
+	.show-btn a
+	{
+		display: inline-block;
+		text-decoration: none;
+		padding-top: 40px;
+	}
+	.show-btn i
+	{
+		color: #fff;
+		font-size: 21px;
+	}
+	.show-navigation 
+	{
+		display: inline-block;
+		text-align: left;
+		width: 250px;
+		padding-top: 140px;
+		padding-bottom: 200px;
+	}
+	.show-navigation ul
+	{
+		margin: 0;
+		padding: 0;
+	}
+	.show-navigation li
+	{
+	list-style: none;
+	padding-bottom: 15px;
+	}
+	.show-navigation li:last-child
+	{
+		padding-bottom: 0;
+	}
+	.show-navigation a
+	{
+		display: inline-block;
+		text-decoration: none;
+		color: #fff;
+		font-style: italic;
+		font-size: 18px;
+		line-height: 25px;
+		font-weight: 400;
+
+	}
+	.show-navigation i
+	{
+		display: inline-block;
+		background-color: #fff;
+		padding: 15px;
+		border-radius: 50%;
+		color: #4eacdd;
+		margin-right: 28px;
+	}
+}
+
